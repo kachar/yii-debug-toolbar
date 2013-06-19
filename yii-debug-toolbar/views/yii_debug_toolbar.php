@@ -1,4 +1,4 @@
-<div id="yii-debug-toolbar-switcher">
+<div id="yii-debug-toolbar-switcher" style="display:none;">
     <a href="javascript:;//"><?php echo YiiDebug::t('TOOLBAR')?></a>
 </div>
 <div id="yii-debug-toolbar" style="display:none;">
@@ -51,5 +51,8 @@
 </div>
 
 <script type="text/javascript">
-(function($) {$(function(){yiiDebugToolbar.init()})}(jQuery));
+if(window.jQuery){
+    $('#yii-debug-toolbar-switcher').show();
+    (function($) {$(function(){yiiDebugToolbar.init()})}(jQuery));
+}
 </script>
